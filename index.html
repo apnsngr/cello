@@ -1,0 +1,17 @@
+---
+layout: default
+---
+<h1 class="mt0">Blog</h1>
+
+<div class="clearfix mxn2">
+  {% for post in site.posts %}
+  <div class="sm-col sm-col-12 px2">
+    <h2 class="h3">
+      <a class="black" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+    </h2>
+    <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
+    <p>{{ post.excerpt }}</p>
+    <a href="{{ post.url | prepend: site.baseurl }}">Read more</a>
+  </div>
+  {% endfor %}
+</div>

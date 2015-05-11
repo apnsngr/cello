@@ -1,0 +1,16 @@
+<header>
+  <nav class="container">
+    <div class="clearfix">
+      <div class="sm-col">
+        <a class="button py2 button-transparent" href="{{ site.baseurl }}/">{{ site.title }}</a>
+      </div>
+      <div class="sm-col-right">
+        {% for page in site.pages %}
+          {% if page.title %}
+            <a class="button py2 button-transparent" href="{{ page.url | prepend: site.baseurl }}">{{ page.title }}</a>
+          {% endif %}
+        {% endfor %}
+      </div>
+    </div>
+  </nav>
+</header>
