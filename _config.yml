@@ -11,6 +11,9 @@ url: "http://yourdomain.com" # the base hostname & protocol for your site
 twitter_username: jekyllrb
 github_username:  jekyll
 
+# Home page
+latest_post_count: 3 # Number of latest posts to show on home page
+
 # Pagination
 paginate: 5
 paginate_path: "/blog/page:num/"
