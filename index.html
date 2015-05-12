@@ -4,8 +4,8 @@ layout: default
 <div class="clearfix mxn2">
   <div class="sm-col sm-col-6 px2 mb2">
     {{ site.description }}
-    <h1 class="h2">Blog</h1>
-    {% for post in site.posts %}
+    <h1 class="h2">Latest Blog Posts</h1>
+    {% for post in site.posts limit:3 %}
     <div>
       <h2 class="h3">
         <a class="black" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
