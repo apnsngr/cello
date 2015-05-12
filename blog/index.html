@@ -12,10 +12,16 @@ layout: default
     <a href="{{ post.url | prepend: site.baseurl }}">Read more</a>
   </div>
   {% endfor %}
-  {% if paginator.next_page %}
-  <a href="{{ paginator.next_page_path }}">Next</a>
-  {% endif %}
-  {% if paginator.previous_page %}
-  <a href="{{ paginator.previous_page_path }}">Previous</a>
-  {% endif %}
+  <div class="clearfix mt2 mxn2">
+    <div class="col">
+      {% if paginator.next_page %}
+      <a href="{{ paginator.next_page_path }}" class="button button-transparent">Older</a>
+      {% endif %}
+    </div>
+    <div class="col-right">
+      {% if paginator.previous_page %}
+      <a href="{{ paginator.previous_page_path }}" class="button button-transparent">Newer</a>
+      {% endif %}
+    </div>
+  </div>
 </div>
