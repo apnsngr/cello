@@ -1,12 +1,11 @@
 ---
 layout: default
 ---
-<div class="clearfix mxn2">
-  <div class="col-6 px2 mx-auto">
-    <h1 class="mt0">Blog</h1>
-  </div>
-  {% for post in site.posts %}
-  <div class="sm-col-8 md-col-7 lg-col-6 px2 mx-auto">
+<div class="sm-col sm-col-6 px2 mb2">
+  {{ site.description }}
+  <h1 class="h2">Latest Blog Posts</h1>
+  {% for post in site.posts limit:3 %}
+  <div>
     <h2 class="h3">
       <a class="black" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
     </h2>
@@ -15,4 +14,21 @@ layout: default
     <a href="{{ post.url | prepend: site.baseurl }}">Read more</a>
   </div>
   {% endfor %}
+  <a href="{{ "blog/" | prepend: site.baseurl }}">More posts...</a>
+</div>
+<div class="sm-col sm-col-6 px2">
+  <div>
+    <h1 class="h2 mt0">Links</h1>
+    <ul class="list-reset">
+      <li><a href="#" class="button block button-transparent">First Link</a></li>
+      <li><a href="#" class="button block button-transparent">Second Link</a></li>
+    </ul>
+  </div>
+  <div>
+    <h1 class="h2 mt0">More Links</h1>
+    <ul class="list-reset">
+      <li><a href="#" class="button block button-transparent">Another First Link</a></li>
+      <li><a href="#" class="button block button-transparent">Another Second Link</a></li>
+    </ul>
+  </div>
 </div>
