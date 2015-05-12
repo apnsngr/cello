@@ -11,6 +11,38 @@ url: "http://yourdomain.com" # the base hostname & protocol for your site
 twitter_username: jekyllrb
 github_username:  jekyll
 
+# Home page
+latest_post_count: 3 # Number of latest posts to show on home page
+side_bar: # Links in the side bar on the home page
+  - label: Some Internal Links
+    items:
+      - internal: true
+        name: Blog
+        href: /blog/
+      - internal: true
+        name: About
+        href: /about/
+  - label: Some External Links
+    items:
+      - internal: false
+        name: Github
+        href: https://github.com
+      - internal: false
+        name: Duck Duck Go
+        href: https://duckduckgo.com
+
+# Navigation bar
+# Set the links in the navigation bar. If internal is set to true then the
+# site's base URL will be prepended to the href, otherwise the href will just be
+# put in the link.
+nav_items:
+  - internal: true
+    name: Blog
+    href: /blog/
+  - internal: true
+    name: About
+    href: /about/
+
 # Pagination
 paginate: 5
 paginate_path: "/blog/page:num/"
