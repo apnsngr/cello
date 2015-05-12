@@ -5,11 +5,8 @@
         <a class="button py2 button-transparent" href="{{ site.baseurl }}/">{{ site.title }}</a>
       </div>
       <div class="sm-col-right">
-        {% for page in site.pages %}
-          {% if page.title %}
-            <a class="button py2 button-transparent" href="{{ page.url | prepend: site.baseurl }}">{{ page.title }}</a>
-          {% endif %}
-        {% endfor %}
+        <a class="button py2 button-transparent" href="{{ "/blog/" | prepend: site.baseurl }}">Blog</a>
+        <a class="button py2 button-transparent" href="{{ "/about/" | prepend: site.baseurl }}">About</a>
       </div>
     </div>
   </nav>

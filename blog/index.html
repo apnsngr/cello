@@ -1,10 +1,8 @@
 ---
 layout: default
-title: Blog
-permalink: /blog/
 ---
 <div class="sm-col-6 md-col-7 lg-col-6 px2 mx-auto">
-  {% for post in site.posts %}
+  {% for post in paginator.posts %}
   <div>
     <h2 class="h3">
       <a class="black" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
@@ -14,4 +12,10 @@ permalink: /blog/
     <a href="{{ post.url | prepend: site.baseurl }}">Read more</a>
   </div>
   {% endfor %}
+  {% if paginator.next_page %}
+  <a href="{{ paginator.next_page_path }}">Next</a>
+  {% endif %}
+  {% if paginator.previous_page %}
+  <a href="{{ paginator.previous_page_path }}">Previous</a>
+  {% endif %}
 </div>
