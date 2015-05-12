@@ -3,7 +3,7 @@ layout: default
 ---
 <div class="sm-col sm-col-6 px2 mb2">
   {{ site.description }}
-  <h1 class="h2">Latest Blog Posts</h1>
+  <h1 class="h2">Latest Blog Post{% if site.latest_post_count > 1  and site.posts.size > 1 %}s{% endif %}</h1>
   {% for post in site.posts limit:site.latest_post_count %}
   <div>
     <h2 class="h3">
