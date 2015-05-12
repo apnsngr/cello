@@ -1,0 +1,23 @@
+---
+layout: default
+---
+<div class="sm-col-6 md-col-7 lg-col-6 px2 mx-auto">
+  {% for post in paginator.posts %}
+  <div>
+    <h2 class="h3">
+      <a class="black" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+    </h2>
+    <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
+    <p>{{ post.excerpt }}</p>
+    <a href="{{ post.url | prepend: site.baseurl }}">Read more</a>
+  </div>
+  {% endfor %}
+  <div class="clearfix mt2 mxn2">
+    {% if paginator.next_page %}
+    <a href="{{ paginator.next_page_path }}" class="left button button-transparent">Older</a>
+    {% endif %}
+    {% if paginator.previous_page %}
+    <a href="{{ paginator.previous_page_path }}" class="right button button-transparent">Newer</a>
+    {% endif %}
+  </div>
+</div>

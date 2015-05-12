@@ -2,12 +2,16 @@
 <html>
   {% include head.html %}
   <body>
-    {% include header.html %}
+    <div class="flex flex-column" style="min-height:100vh">
+      {% include header.html %}
 
-    <section class="container px2 py2">
-      {{ content }}
-    </section>
+      <section class="flex-auto container px2 py2">
+        <div class="clearfix mxn2">
+          {{ content }}
+        </div>
+      </section>
 
-    {% include footer.html %}
+      {% include footer.html %}
+    </div>
   </body>
 </html>

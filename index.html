@@ -1,17 +1,30 @@
 ---
 layout: default
 ---
-<h1 class="mt0">Blog</h1>
-
-<div class="clearfix mxn2">
-  {% for post in site.posts %}
-  <div class="sm-col sm-col-12 px2">
+<div class="sm-col sm-col-6 px2 mb2">
+  {{ site.description }}
+  <h1 class="h2">Latest Blog Post{% if site.latest_post_count > 1  and site.posts.size > 1 %}s{% endif %}</h1>
+  {% for post in site.posts limit:site.latest_post_count %}
+  <div>
     <h2 class="h3">
       <a class="black" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
     </h2>
     <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
     <p>{{ post.excerpt }}</p>
     <a href="{{ post.url | prepend: site.baseurl }}">Read more</a>
+  </div>
+  {% endfor %}
+  <a href="{{ "blog/" | prepend: site.baseurl }}">More posts...</a>
+</div>
+<div class="sm-col sm-col-6 px2">
+  {% for section in site.side_bar %}
+  <div>
+    <h1 class="h2 mt0">{{ section.label }}</h1>
+    <ul class="list-reset">
+      {% for item in section.items %}
+      <li><a href="{% if item.internal %}{{ item.href | prepend: site.baseurl}}{% else %}{{ item.href }}{% endif %}" class="button block button-transparent">{{ item.name }}</a></li>
+      {% endfor %}
+    </ul>
   </div>
   {% endfor %}
 </div>
