@@ -13,15 +13,11 @@ layout: default
   </div>
   {% endfor %}
   <div class="clearfix mt2 mxn2">
-    <div class="col">
-      {% if paginator.next_page %}
-      <a href="{{ paginator.next_page_path }}" class="button button-transparent">Older</a>
-      {% endif %}
-    </div>
-    <div class="col-right">
-      {% if paginator.previous_page %}
-      <a href="{{ paginator.previous_page_path }}" class="button button-transparent">Newer</a>
-      {% endif %}
-    </div>
+    {% if paginator.next_page %}
+    <a href="{{ paginator.next_page_path }}" class="left button button-transparent">Older</a>
+    {% endif %}
+    {% if paginator.previous_page %}
+    <a href="{{ paginator.previous_page_path }}" class="right button button-transparent">Newer</a>
+    {% endif %}
   </div>
 </div>
