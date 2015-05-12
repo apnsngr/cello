@@ -2,17 +2,18 @@
 layout: default
 ---
 <div class="clearfix mxn2">
-  <div class="col-6 px2 mx-auto">
-    <h1 class="mt0">Blog</h1>
-  </div>
-  {% for post in site.posts %}
   <div class="sm-col-8 md-col-7 lg-col-6 px2 mx-auto">
-    <h2 class="h3">
-      <a class="black" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
-    </h2>
-    <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
-    <p>{{ post.excerpt }}</p>
-    <a href="{{ post.url | prepend: site.baseurl }}">Read more</a>
+    {{ site.description }}
+    <h1 class="">Blog</h1>
+    {% for post in site.posts %}
+    <div>
+      <h2 class="h3">
+        <a class="black" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+      </h2>
+      <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
+      <p>{{ post.excerpt }}</p>
+      <a href="{{ post.url | prepend: site.baseurl }}">Read more</a>
+    </div>
+    {% endfor %}
   </div>
-  {% endfor %}
 </div>
