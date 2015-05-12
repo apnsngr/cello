@@ -13,6 +13,23 @@ github_username:  jekyll
 
 # Home page
 latest_post_count: 3 # Number of latest posts to show on home page
+side_bar: # Links in the side bar on the home page
+  - label: Some Internal Links
+    items:
+      - internal: true
+        name: Blog
+        href: /blog/
+      - internal: true
+        name: About
+        href: /about/
+  - label: Some External Links
+    items:
+      - internal: false
+        name: Github
+        href: https://github.com
+      - internal: false
+        name: Duck Duck Go
+        href: https://duckduckgo.com
 
 # Navigation bar
 # Set the links in the navigation bar. If internal is set to true then the
