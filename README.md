@@ -15,6 +15,17 @@ Live Example
 [http://web.ics.purdue.edu/~apensin](http://web.ics.purdue.edu/~apensin)
 
 
+Branching
+---------
+
+This repository uses the
+[Gitflow](http://nvie.com/posts/a-successful-git-branching-model/) branching
+model. A handy git extension for Gitflow is available
+[here](https://github.com/nvie/gitflow). However, I am currently not using it,
+since the current version (0.4.1) tags the release branch instead of the master
+branch.
+
+
 Contributing
 ------------
 
